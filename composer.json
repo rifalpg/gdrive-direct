@@ -1,0 +1,30 @@
+{
+  "name": "rifalpg/gdrive-direct",
+  "description": "Get Google Drive direct link",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "rifalpg",
+      "email": "dev.rifalramadita@gmail.com"
+    }
+  ],
+  "require": {
+    "guzzlehttp/guzzle": "^6.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "Rifalpg\\GDriveDirect\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Rifalpg\\GDriveDirect\\Providers\\GDriveDirectServiceProvider"
+      ],
+      "aliases": {
+        "GDriveDirect": "Rifalpg\\GDriveDirect\\Facades\\GDriveDirect"
+      }
+    }
+  },
+  "minimum-stability": "dev"
+}
