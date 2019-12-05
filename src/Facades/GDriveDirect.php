@@ -8,7 +8,6 @@
 
 namespace Rifalpg\GDriveDirect\Facades;
 
-
 use Illuminate\Support\Facades\Facade;
 
 class GDriveDirect extends Facade
