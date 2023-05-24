@@ -64,7 +64,7 @@ class Direct
             //CHECK VIRUS PAGE
             if ($head->getStatusCode() == 200) {
                 $html = $this->client->get($download_page)->getBody()->getContents();
-                preg_match('/confirm=(.*)&amp;id=(.*)">Download anyway/', $html, $confirm);
+                preg_match('/confirm=(.*)&amp;uuid=(.*)">/', $html, $confirm);
                 $confirm_link = "https://drive.google.com/uc?export=download&confirm={$confirm[1]}&id=$id";
                 $moved = $this->client->head($confirm_link, ['allow_redirects' => false]);
                 $this->direct_link = $direct_link = $moved->getHeader('location')[0];
